@@ -10,8 +10,7 @@ export default function Footer() {
         <div>
           <Link to="/" className="font-bold font-[Poppins] text-white">
             <Cross className="text-[#00B583] inline" size={18} /> NOUVELLE
-            PHARMACIE MPOUTO{" "}
-            <Cross className="text-[#00B583] inline" size={18} />
+            PHARMACIE MPOUTO
           </Link>
           <p className="mt-2 text-gray-300">
             Votre santé, notre priorité. Nous vous accompagnons avec

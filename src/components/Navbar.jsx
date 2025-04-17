@@ -31,13 +31,17 @@ export default function Navbar() {
       <div className="relative max-w-7xl mx-auto px-4 py-8 flex justify-between items-center font-sans">
         {/* LOGO */}
         <div></div>
+
         <Link
           to="/"
-          className="absolute left-0 w-[150px] h-[150px] text-sm font-bold font-[Poppins] text-white"
+          className={`absolute left-0  text-sm font-bold text-white  ${
+            selectedPharmaLink
+              ? "md:w-[100px] md:h-[100px] w-[70px] h-[60px]"
+              : "md:w-[150px] md:h-[150px] w-[100px] h-[90px]"
+          }`}
         >
           <img
-            src="/logonpm.png"
-            className="w-full h-full"
+            src={selectedPharmaLink ? "logok.png" : "logonpm.png"}
             alt="Logo de la nouvelle pharmacie mpouto"
           />
         </Link>
@@ -163,7 +167,7 @@ export default function Navbar() {
       <AnimatePresence>
         {selectedPharmaLink && (
           <motion.div
-            className="bg-[#EAD72A] text-black  flex justify-center gap-4 sm:gap-6 py-2 px-4 text-[10px] sm:text-sm border-t border-gray-200"
+            className="bg-[#EAD72A] text-black z-50 flex justify-center gap-4 sm:gap-6 py-2 px-4 text-[10px] sm:text-sm border-t border-gray-200"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
