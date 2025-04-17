@@ -14,7 +14,7 @@ export default function Footer() {
           </Link>
           <p className="mt-2 text-gray-300">
             Votre santé, notre priorité. Nous vous accompagnons avec
-            professionnalisme et bienveillance.
+            professionnalisme et bienveillance.  
           </p>
         </div>
 
@@ -72,7 +72,7 @@ export default function Footer() {
         <div>
           <div className="flex gap-6 py-6 pt-14">
             <a
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/company/106560898/admin/dashboard/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-600 text-[#7FB23A] transition"
@@ -80,7 +80,7 @@ export default function Footer() {
               <FaLinkedin className="w-6 h-6" />
             </a>
             <a
-              href="https://www.facebook.com"
+              href="https://www.facebook.com/nouvellepharmaciempouto/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-700 text-[#7FB23A] transition"

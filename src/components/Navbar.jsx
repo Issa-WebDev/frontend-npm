@@ -154,10 +154,16 @@ export default function Navbar() {
           </Link>
 
           <div className="flex gap-6">
-            <a href="#" className="text-[#FFFFFF] hover:text-blue-600">
+            <a
+              href="https://www.facebook.com/nouvellepharmaciempouto/"
+              className="text-[#FFFFFF] hover:text-blue-600"
+            >
               <FaLinkedin size={24} />
             </a>
-            <a href="#" className="text-[#FFFFFF] hover:text-blue-700">
+            <a
+              href="https://www.linkedin.com/company/106560898/admin/dashboard/"
+              className="text-[#FFFFFF] hover:text-blue-700"
+            >
               <FaFacebook size={24} />
             </a>
           </div>
