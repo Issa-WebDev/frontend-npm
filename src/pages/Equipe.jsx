@@ -6,7 +6,7 @@ import { RiTeamFill } from "react-icons/ri";
 const ceo = {
   nom: "Dr TRAORE Adama",
   role: "CEO | Pharmacien titulaire",
-  image: "ceo.jpg",
+  image: "ceo.webp",
   bio: `Dr TRAORE Adama, PharmD - PhD Dermo-cosmétologie est un ancien Interne des Hôpitaux. 
         Le choix de l’industrie l’a amené à travailler durant 23 ans à Paris pour les leaders de la cosmétique tels que Chanel, l'Oréal, LVMH, Seppic, J&J, Galderma. 
         Fort de cette expérience riche et variée, Il a décidé de s’installer au bord de la Lagune Ebrié à Abidjan pour proposer son offre et  répondre aux besoins locaux.
@@ -19,26 +19,26 @@ const ceo = {
 const equipe = [
   {
     nom: "Fatou Bamba",
-    role: "Pharmacien",
-    image: "ceo.jpg",
+    role: "Medecins",
+    image: "medecin.webp",
     bio: "Fatou accompagne les patients avec bienveillance et prépare les ordonnances avec rigueur.",
   },
   {
     nom: "Mia Elisabel",
-    role: "Médecins",
-    image: "ep3.jpg",
+    role: "Pharmacien",
+    image: "pharmacien.webp",
     bio: "Ahmed s’occupe de la logistique et veille à ce que les stocks soient toujours disponibles.",
   },
   {
     nom: "Josiane Aka",
     role: "Experts Biologistes",
-    image: "ep1.jpg",
+    image: "eb.webp",
     bio: "Souriante et à l’écoute, elle oriente les clients dès leur arrivée avec professionnalisme.",
   },
   {
     nom: "Ahmed Traoré",
     role: "Techniciens ",
-    image: "ep2.jpg",
+    image: "technicien.webp",
     bio: "Ahmed s’occupe de la logistique et veille à ce que les stocks soient toujours disponibles.",
   },
 ];
@@ -59,9 +59,7 @@ export default function Equipe() {
       >
         {/* Texte */}
         <div className="text-center md:text-left">
-          <h2 className="text-3xl md:text-4xl font-bold mb-2">
-            {ceo.nom}
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-2">{ceo.nom}</h2>
           <p className="text-[#00B583] font-semibold text-lg mb-4">
             {ceo.role}
           </p>
@@ -72,11 +70,11 @@ export default function Equipe() {
         </div>
 
         {/* Image */}
-        <div className="w-full md:h-[600px] rounded-lg overflow-hidden shadow-xl">
+        <div className="w-full md:h-[600px] overflow-hidden shadow-xl">
           <img
             src={ceo.image}
             alt={ceo.nom}
-            className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+            className="w-full object-cover transition-transform duration-300 hover:scale-105"
           />
         </div>
       </motion.div>
@@ -86,16 +84,16 @@ export default function Equipe() {
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeInUp}
-        className="text-3xl md:text-4xl font-bold text-center text-[#1d2f4c] mb-12"
+        className="text-3xl md:text-4xl font-bold text-center"
       >
-        <RiTeamFill className="inline-block text-[#00B583] mr-2 mb-1" />
+        <RiTeamFill className="inline-block text-[#7FB23A] mr-2 mb-1" />
         NOTRE EQUIPE
       </motion.h2>
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.35, duration: 0.1 }}
-        className="md:text-lg text-md px-6 mb-10 text-center  text-[#1d2f4c]"
+        className="md:text-[16px] text-sm text-left md:text-center px-4 md:px-[20%] pt-8"
       >
         Composée de Pharmacien, Médecins, Experts, Biologistes, Techniciens
         investis dans la Parapharmacie pour répondre aux sollicitations
@@ -105,7 +103,7 @@ export default function Equipe() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4, duration: 0.1 }}
-        className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+        className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-10"
       >
         {equipe.map((membre, index) => (
           <motion.div

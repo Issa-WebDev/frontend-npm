@@ -31,20 +31,20 @@ const CareHeart = () => {
     },
   ];
   return (
-    <div className="bg-[#224170] mb-10 text-white pt-12 pb-8">
+    <div className="bg-gray-100 mb-10  pt-12 pb-8">
       <div className="max-w-7xl mx-auto px-4">
         <motion.h2
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className="text-center text-white mb-12"
+          className="text-center  mb-12"
         >
           <h1 className="text-2xl md:text-4xl font-bold">
-            <RiTeamFill className="inline-block text-white mr-2 mb-1" />
+            <RiTeamFill className="inline-block  mr-2 mb-1" />
             NOTRE EQUIPE
           </h1>
-          <p className="md:text-lg text-md pt-8">
+          <p className="md:text-[16px] text-sm text-left md:text-center px-4 md:px-[20%] pt-8">
             Composée de Pharmacien, Médecins, Experts Biologistes, Techniciens
             investis dans la Parapharmacie pour répondre aux sollicitations
             nombreuses des consommatrices/consommateurs soucieux de leur bien

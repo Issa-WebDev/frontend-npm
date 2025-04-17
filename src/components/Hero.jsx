@@ -3,37 +3,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Cross } from "lucide-react";
 import { Link } from "react-router-dom";
 import IntroCard from "./IntroCard";
-import { div } from "framer-motion/client";
 
-const images = ["/banner1.jpg", "/banner2.jpg", "/banner3.jpg"];
+const images = ["/banner1.webp", "/banner2.webp", "/banner3.webp"];
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const slideVariants = {
-    enter: (direction) => ({
-      x: direction > 0 ? "100%" : "-100%",
-    }),
-    center: {
-      x: 0,
-    },
-    exit: (direction) => ({
-      x: direction > 0 ? "-100%" : "100%",
-    }),
-  };
-
   const [direction, setDirection] = useState(1);
+  const [slideIndex, setSlideIndex] = useState(0); // <- unique key pour éviter le bug
 
   const paginate = (newIndex) => {
     setDirection(newIndex > current ? 1 : -1);
     setCurrent(newIndex);
+    setSlideIndex((prev) => prev + 1);
   };
 
   useEffect(() => {
@@ -43,25 +24,45 @@ export default function Hero() {
     return () => clearInterval(timer);
   }, [current]);
 
+  const slideVariants = {
+    enter: (direction) => ({
+      x: direction > 0 ? "100%" : "-100%",
+      position: "absolute",
+    }),
+    center: {
+      x: 0,
+      position: "absolute",
+    },
+    exit: (direction) => ({
+      x: direction > 0 ? "-100%" : "100%",
+      position: "absolute",
+    }),
+  };
+
   return (
     <div className="relative">
       <section className="relative min-h-[100vh] md:min-h-[120vh] overflow-hidden">
         {/* Image slider */}
-        <div className="absolute inset-0 w-full h-full">
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
           <AnimatePresence custom={direction} initial={false}>
-            <motion.img
-              key={images[current]}
-              src={images[current]}
+            <motion.div
+              key={slideIndex}
+              className="w-full h-full"
               custom={direction}
               variants={slideVariants}
               initial="enter"
               animate="center"
               exit="exit"
               transition={{
-                x: { type: "tween", duration: 1 },
+                x: { type: "tween", ease: "easeInOut", duration: 1 },
               }}
-              className="absolute inset-0 w-full h-full object-cover object-right md:object-center"
-            />
+            >
+              <img
+                src={images[current]}
+                className="w-full h-full object-cover object-right md:object-center"
+                style={{ opacity: 1 }}
+              />
+            </motion.div>
           </AnimatePresence>
           <div className="absolute inset-0 bg-black/50" />
         </div>
@@ -73,10 +74,8 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="text-white"
-            // style={{ background: "rgba(225, 225, 225, 0.5)" }}
           >
             <h1 className="text-1xl lg:text-2xl xl:text-3xl font-bold leading-tight mb-6">
-              {/* <Cross className="text-[#00B583] inline" size={25} /> */}
               LA NOUVELLE PHARMACIE MPOUTO
               <Cross className="text-[#7FB23A] inline" size={25} />
             </h1>
@@ -102,7 +101,6 @@ export default function Hero() {
       <div className="relative w-full flex items-center top-[-15vh] justify-center">
         <IntroCard />
       </div>
-      {/* <div className="md:h-[55vh] "></div> */}
     </div>
   );
 }

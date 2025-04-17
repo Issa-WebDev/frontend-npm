@@ -2,7 +2,7 @@ export default function MapFrame() {
   return (
     <section className="w-full bg-white">
       <div className="w-full">
-        <h2 className="text-2xl md:text-4xl font-semibold text-[#1d2f4c] mb-6 text-center">
+        <h2 className="text-2xl md:text-4xl font-semibold mb-6 text-center">
           OU NOUS TROUVEZ ?
         </h2>
         <div className="w-full h-[400px] overflow-hidden shadow-lg">

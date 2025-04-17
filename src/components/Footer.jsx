@@ -76,7 +76,7 @@ export default function Footer() {
               href="https://www.linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-blue-600 text-[#00B583] transition"
+              className="hover:text-blue-600 text-[#7FB23A] transition"
             >
               <FaLinkedin className="w-6 h-6" />
             </a>
@@ -84,7 +84,7 @@ export default function Footer() {
               href="https://www.facebook.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-blue-700 text-[#00B583] transition"
+              className="hover:text-blue-700 text-[#7FB23A] transition"
             >
               <FaFacebook className="w-6 h-6" />
             </a>

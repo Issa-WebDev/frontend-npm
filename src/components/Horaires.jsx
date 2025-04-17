@@ -62,11 +62,11 @@ export default function Horaires() {
               <li>Dimanche : Vente en ligne uniquement 10h30 - 15h00</li>
             </ul>
 
-            <div className="mt-4">
+            {/* <div className="mt-4">
               <button className="mt-2 flex items-center gap-2 bg-[#7FB23A] text-white font-bold px-4 py-2 rounded-lg hover:bg-opacity-90 transition cursor-pointer">
                 <FaShoppingCart /> Commander en ligne
               </button>
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </div>

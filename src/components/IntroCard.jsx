@@ -3,7 +3,7 @@ export default function IntroCard() {
     {
       name: "Dr TRAORE Adama",
       role: "CEO | Pharmacien titulaire",
-      image: "/profil-ceo.jpg",
+      image: "/ceo-profil.webp",
       description:
         "Dr TRAORE Adama, PharmD - PhD Dermo-cosmétologie est un ancien Interne des Hôpitaux. Le choix de l’industrie l’a amené à travailler durant 23 ans à Paris pour les leaders de la cosmétique tels que Chanel, l'Oréal, LVMH, Seppic, J&J, Galderma.",
       color: "#1d375e",
@@ -32,7 +32,7 @@ export default function IntroCard() {
         {members.map((member, index) => (
           <div
             key={index}
-            className="px-4 lg:py-8 py-4 flex flex-col items-center text-white text-center"
+            className="px-4 lg:py-8 py-4 flex flex-col items-center text-white text-left md:text-center"
             style={{ background: member.color }}
           >
             <img

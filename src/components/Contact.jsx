@@ -48,25 +48,25 @@ export default function Contact() {
       transition={{ duration: 0.3 }}
       viewport={{ once: true }}
     >
-      <section className="min-h-screen max-w-4xl mx-auto px-4 pt-10">
+      <section className="min-h-screen max-w-4xl mx-auto px-4 pt-20">
         <Toaster position="top-right" />{" "}
         {/* <- important pour afficher les toasts */}
-        <motion.h2
+        <motion.h1
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
           className="text-center text-[#1d2f4c] mb-12"
         >
-          <h1 className="text-2xl md:text-4xl font-bold">
+          <p className="text-2xl md:text-4xl font-bold">
             <FaPhoneAlt className="inline-block text-[#7FB23A] mr-2 mb-1" />
             VOUS AVEZ BESOIN DE CONSEIL
-          </h1>
-          <p className="md:text-lg text-md pt-8">
+          </p>
+          <p className="md:text-[16px] text-sm text-left md:text-center px-4 md:px-[20%] pt-8">
             Nous sommes présents pour vous chaque jour. Faites le
             pas, c'est gratuit.
           </p>
-        </motion.h2>
+        </motion.h1>
         <form ref={form} onSubmit={sendEmail} className="space-y-6">
           <div className="grid grid-cols-1 gap-4">
             <input

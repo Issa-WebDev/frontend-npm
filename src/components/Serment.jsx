@@ -19,13 +19,13 @@ const Serment = () => {
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeInUp}
-        className="text-center text-[#1d2f4c] mb-12"
+        className="text-center mb-12"
       >
         <h1 className="text-2xl md:text-4xl font-bold">
           <Cross className="inline text-[#7FB23A]" size={40} /> SERMENT DE
           GALIEN
         </h1>
-        <p className="md:text-lg text-ld pt-8">
+        <p className="md:text-[16px] text-sm text-left md:text-center px-4 md:px-[20%] pt-8">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
           provident esse tenetur minus labore dolor iste voluptas reprehenderit
           nobis error illo adipisci, veniam sunt quo! Vero facilis tenetur

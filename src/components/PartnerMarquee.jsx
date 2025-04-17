@@ -32,7 +32,7 @@ export default function PartnerMarquee() {
   return (
     <section className="bg-[#f4f4f4] py-8 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-center text-2xl md:text-4xl font-semibold text-[#1d2f4c] mb-6">
+        <h2 className="text-center text-2xl md:text-4xl font-semibold mb-6">
           NOS MARQUES
         </h2>
         <div className="relative w-full overflow-hidden">

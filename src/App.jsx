@@ -11,11 +11,12 @@ import ScrollToTop from "./components/ScrollToTop";
 import Horaires from "./components/Horaires";
 import MapFrame from "./components/MapFrame";
 import PartnerMarquee from "./components/PartnerMarquee";
+import Credo from "./pages/Credo";
 
 
 function App() {
   return (
-    <div className="text-gray-100 bg-white min-h-screen">
+    <div className="text-gray-700 bg-white min-h-screen">
       <ScrollToTop />
       <Navbar />
       <Routes>
@@ -23,6 +24,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/equipe" element={<Equipe />} />
         <Route path="/galerie" element={<Galerie />} />
+        <Route path="/credo" element={<Credo />} />
         <Route path="*" element={<NotFound />} />
         {/* autres routes plus tard */}
       </Routes>

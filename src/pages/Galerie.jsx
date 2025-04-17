@@ -2,21 +2,14 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { RiGalleryFill } from "react-icons/ri";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules"; // ✅ ici
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "../swiper-custom.css";
 import Contact from "../components/Contact";
 
-const images = [
-  "/pha-1.jpg",
-  "/pha-2.jpg",
-  "/pha4.avif",
-  "/pha3.avif",
-  "/pha1.avif",
-  "/pha2.avif",
-];
+const images = Array.from({ length: 50 }, (_, i) => `/galerie${i + 1}.webp`);
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -27,25 +20,31 @@ export default function Galerie() {
   const [modalIndex, setModalIndex] = useState(null);
 
   return (
-    <section className="bg-[#f8f9fa] py-16">
+    <section className="py-16">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <motion.h2
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className="text-3xl md:text-4xl font-bold text-center text-[#1d2f4c] mb-12 font-[Poppins]"
+          className="text-3xl md:text-4xl font-bold text-center mb-12"
         >
-          <RiGalleryFill className="inline-block text-[#00B583] mr-2 mb-1" />
-          Notre Galerie
+          <RiGalleryFill className="inline-block text-[#7FB23A] mr-2 mb-1" />
+          NOTRE GALERIE
         </motion.h2>
 
         {/* Carousel visible directement */}
         <div className="hidden md:block">
           <Swiper
-            modules={[Navigation, Pagination]}
+            modules={[Navigation, Pagination, Autoplay]} // ✅ autoplay ici
             navigation
             pagination={{ clickable: true }}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }} // ✅ autoplay config
+            loop={true}
             spaceBetween={20}
             slidesPerView={3}
             breakpoints={{
@@ -106,6 +105,7 @@ export default function Galerie() {
               pagination={{ clickable: true }}
               initialSlide={modalIndex}
               className="w-[90%] h-[80%]"
+              loop={true}
             >
               {images.map((src, index) => (
                 <SwiperSlide key={index}>
