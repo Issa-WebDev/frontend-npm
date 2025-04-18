@@ -1,3 +1,30 @@
+import { motion } from "framer-motion";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const childVariant = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.4,
+      ease: "easeOut",
+    },
+  },
+};
+
 export default function IntroCard() {
   const members = [
     {
@@ -6,7 +33,7 @@ export default function IntroCard() {
       image: "/ceo-profil.webp",
       description:
         "Dr TRAORE Adama, PharmD - PhD Dermo-cosmétologie est un ancien Interne des Hôpitaux. Le choix de l’industrie l’a amené à travailler durant 23 ans à Paris pour les leaders de la cosmétique tels que Chanel, l'Oréal, LVMH, Seppic, J&J, Galderma.",
-      color: "#1d375e",
+      color: "linear-gradient(90deg, #7E9B5E, #6A874C)",
     },
     {
       name: "CONSEILS",
@@ -14,7 +41,7 @@ export default function IntroCard() {
       image: "/conseil.jpg",
       description:
         "Sous la responsabilité de Dr TRAORE, le VISA KLC ambitionne d'encadrer la formation des parapharmaciens en passant par la recommandation de programmes de soins et/ou des routines adéquates.",
-      color: "#396dba",
+      color: "linear-gradient(60deg, #7E9B5E, #6A874C)",
     },
     {
       name: "PARA-PHARMACIE",
@@ -22,17 +49,24 @@ export default function IntroCard() {
       image: "/para.jpg",
       description:
         "Sous la responsabilité de Dr TRAORE, le VISA KLC ambitionne d'encadrer la formation des parapharmaciens en passant par la recommandation de programmes de soins et/ou des routines adéquates.",
-      color: "#395e97",
+      color: "linear-gradient(90deg, #6A874C, #7E9B5E, #A0B97A)",
     },
   ];
 
   return (
-    <section className="px-4 md:w-[80%] w-[90%]  ">
-      <div className="grid grid-cols-1 lg:grid-cols-3 max-w-7xl mx-auto">
+    <motion.section
+      className="px-4 md:w-[80%] w-[90%] mx-auto"
+      variants={fadeInUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto">
         {members.map((member, index) => (
-          <div
+          <motion.div
             key={index}
-            className="px-4 lg:py-8 py-4 flex flex-col items-center text-white text-left md:text-center"
+            variants={childVariant}
+            className="px-4 lg:py-8 py-4 flex flex-col rounded-md items-center text-white text-left md:text-center"
             style={{ background: member.color }}
           >
             <img
@@ -41,11 +75,13 @@ export default function IntroCard() {
               className="w-40 h-40 rounded-full object-cover mb-4"
             />
             <h3 className="text-xl font-semibold pb-2">{member.name}</h3>
-            <span className="text-md px-10 pb-4">{member.role}</span>
+            {member.role && (
+              <span className="text-md px-10 pb-4">{member.role}</span>
+            )}
             <p className="text-sm px-2 md:px-10 pb-4">{member.description}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }

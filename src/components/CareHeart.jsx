@@ -1,20 +1,55 @@
 import React from "react";
+import { motion } from "framer-motion";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const childVariant = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.4,
+      ease: "easeOut",
+    },
+  },
+};
 
 const CareHeart = () => {
   return (
-    <div className="bg-gray-100 mb-10 pt-12 pb-8">
+    <motion.div
+      className="mb-10 pt-12 pb-8"
+      variants={fadeInUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
       <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
-        {/* Logo ou image */}
-        <div className="flex justify-center md:justify-start">
+        {/* Image animée */}
+        <motion.div
+          variants={childVariant}
+          className="flex justify-center md:justify-start"
+        >
           <img
             src="/careheart.jpg"
             alt="Care Heart"
             className="w-full h-auto rounded-lg shadow-lg"
           />
-        </div>
+        </motion.div>
 
-        {/* Texte de description */}
-        <div>
+        {/* Texte animé */}
+        <motion.div variants={childVariant}>
           <h2 className="text-2xl md:text-4xl font-bold mb-4">
             PRENEZ SOIN DE VOTRE COEUR
           </h2>
@@ -27,9 +62,9 @@ const CareHeart = () => {
             technologie de pointe, des équipements modernes et des bases
             novatrices.
           </p>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

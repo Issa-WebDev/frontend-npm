@@ -48,26 +48,34 @@ export default function Contact() {
       transition={{ duration: 0.3 }}
       viewport={{ once: true }}
     >
-      <section className="min-h-screen max-w-4xl mx-auto px-4 pt-20">
+      <section className="min-h-screen max-w-7xl mx-auto px-4">
+        <div className="relative mt-20 w-full h-[40vh] md:h-[50vh] flex items-center justify-center text-white">
+          <div className="absolute z-20 inset-0 bg-black/40" />
+          <img
+            src="/c1.webp"
+            alt="Bannière"
+            className="absolute rounded-md w-full h-full object-cover"
+          />
+          <motion.h1
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+            className="text-centerabsoulue text-center px-4 z-40"
+          >
+            <p className="text-2xl md:text-4xl font-bold">
+              <FaPhoneAlt className="inline-block text-white mr-2 mb-1" />
+              VOUS AVEZ BESOIN DE CONSEIL
+            </p>
+            <p className="md:text-[16px] text-sm text-left md:text-center px-4 md:px-[20%] pt-8">
+              Nous sommes présents pour vous chaque jour. Faites le
+              pas, c'est gratuit.
+            </p>
+          </motion.h1>
+        </div>
         <Toaster position="top-right" />{" "}
         {/* <- important pour afficher les toasts */}
-        <motion.h1
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-          className="text-center text-[#1d2f4c] mb-12"
-        >
-          <p className="text-2xl md:text-4xl font-bold">
-            <FaPhoneAlt className="inline-block text-[#7FB23A] mr-2 mb-1" />
-            VOUS AVEZ BESOIN DE CONSEIL
-          </p>
-          <p className="md:text-[16px] text-sm text-left md:text-center px-4 md:px-[20%] pt-8">
-            Nous sommes présents pour vous chaque jour. Faites le
-            pas, c'est gratuit.
-          </p>
-        </motion.h1>
-        <form ref={form} onSubmit={sendEmail} className="space-y-6">
+        <form ref={form} onSubmit={sendEmail} className="space-y-6 mt-10">
           <div className="grid grid-cols-1 gap-4">
             <input
               type="text"
@@ -102,7 +110,7 @@ export default function Contact() {
           ></textarea>
           <button
             type="submit"
-            className="bg-[#7FB23A] bodrt border-gray-400 font-bold text-white px-10 py-3 cursor-pointer hover:bg-opacity-80 rounded-[0.2rem] transition"
+            className="bg-[#7FB23A]  border-gray-400 font-bold text-white px-10 py-3 cursor-pointer hover:bg-opacity-80 rounded-[0.2rem] transition"
           >
             Envoyer
           </button>
@@ -111,3 +119,5 @@ export default function Contact() {
     </motion.div>
   );
 }
+
+// service_ls6pv7b;

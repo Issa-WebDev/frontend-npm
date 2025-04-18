@@ -1,44 +1,50 @@
 import { Link } from "react-router-dom";
 import { Cross, Mail, Phone, MapPin } from "lucide-react";
-import { FaLinkedin, FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
+import { FaLinkedin, FaFacebook } from "react-icons/fa";
+import { MdMarkunreadMailbox } from "react-icons/md";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1d2f4c] text-white pt-8 pb-4">
+    <footer className="bg-[#6A874C] text-white pt-8 pb-4">
       <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-4 gap-16 text-sm text-left">
         {/* Branding */}
         <div>
-          <Link to="/" className="font-bold font-[Poppins] text-white">
-            <Cross className="text-[#00B583] inline" size={18} /> NOUVELLE
-            PHARMACIE MPOUTO
+          <Link to="/" className="font-bold text-white">
+            <Cross className="text-white inline" size={18} /> NOUVELLE PHARMACIE
+            MPOUTO
           </Link>
-          <p className="mt-2 text-gray-300">
+          <p className="mt-2 text-gray-100">
             Votre santé, notre priorité. Nous vous accompagnons avec
-            professionnalisme et bienveillance.  
+            professionnalisme et bienveillance.
           </p>
         </div>
-
         {/* Contact Info */}
         <div>
           <h3 className="text-white font-semibold mb-2">Contact</h3>
-          <ul className="space-y-2 text-gray-300">
+          <ul className="space-y-2 text-gray-100">
             <li className="flex items-center gap-2">
               <div>
-                <Phone size={16} className="text-[#00B583]" />
+                <Phone size={16} className="text-white" />
               </div>
-              <p> +225 27 22 59 13 88 / 25 20 00 16 34 / 07 87 72 50 06</p>
+              <p className="text-[13px]"> +225 27 22 59 13 88 / 25 20 00 16 34 / 07 87 72 50 06</p>
             </li>
             <li className="flex items-center gap-2">
               <div>
-                <Mail size={16} className="text-[#00B583]" />
+                <Mail size={16} className="text-white" />
               </div>
               <p>Nvellepharmaciempouto@gmail.com</p>
             </li>
             <li className="flex items-center gap-2">
               <div>
-                <MapPin size={16} className="text-[#00B583]" />
+                <MdMarkunreadMailbox size={16} className="text-white" />
               </div>
-              <p>08 BP 3436 Abidjan 08 Abidjan, Riviera4 M'Pouto Ciad Primo.</p>
+              <p>08 BP 3436 Abidjan 08 Abidjan</p>
+            </li>
+            <li className="flex items-center gap-2">
+              <div>
+                <MapPin size={16} className="text-white" />
+              </div>
+              <p>Riviera4 M'Pouto Ciad Primo.</p>
             </li>
           </ul>
         </div>
@@ -46,7 +52,7 @@ export default function Footer() {
         {/* Liens rapides (optionnel) */}
         <div>
           <h3 className="text-white font-semibold mb-2">Liens rapides</h3>
-          <ul className="space-y-1 text-gray-300">
+          <ul className="space-y-1 text-gray-100">
             <li>
               <Link to="/contact" className="hover:text-[#00B583]">
                 Contact
@@ -75,7 +81,7 @@ export default function Footer() {
               href="https://www.linkedin.com/company/106560898/admin/dashboard/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-blue-600 text-[#7FB23A] transition"
+              className="hover:text-blue-600 text-white transition"
             >
               <FaLinkedin className="w-6 h-6" />
             </a>
@@ -83,7 +89,7 @@ export default function Footer() {
               href="https://www.facebook.com/nouvellepharmaciempouto/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-blue-700 text-[#7FB23A] transition"
+              className="hover:text-blue-700 text-white transition"
             >
               <FaFacebook className="w-6 h-6" />
             </a>
@@ -91,7 +97,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-gray-600 mt-6 pt-4 text-center text-xs text-gray-400">
+      <div className="border-t border-white mt-6 pt-4 text-center text-xs text-gray-200">
         <p>
           © {new Date().getFullYear()} - NOUVELLE PHARMACIE MPOUTO. Tous droits
           réservés.

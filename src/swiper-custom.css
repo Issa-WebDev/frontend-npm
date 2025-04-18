@@ -1,7 +1,7 @@
 /* Flèches vertes et plus grandes */
 .swiper-button-prev,
 .swiper-button-next {
-  color: #00B583;
+  color: rgba(225, 225, 225, 0.9);
   font-weight: bold;
   scale: 1.5;
   cursor: pointer;
@@ -16,6 +16,6 @@
 }
 
 .swiper-pagination-bullet-active {
-  background: #00B583;
+  background: gray;
   opacity: 1;
 }

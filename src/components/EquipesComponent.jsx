@@ -30,18 +30,25 @@ const CareHeart = () => {
       icon: <MdEngineering size={40} />,
     },
   ];
+
   return (
-    <div className="bg-gray-100 mb-10  pt-12 pb-8">
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
+      viewport={{ once: true }}
+      className="mb-10 pt-12 pb-8"
+    >
       <div className="max-w-7xl mx-auto px-4">
-        <motion.h2
+        <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className="text-center  mb-12"
+          className="text-center mb-12"
         >
           <h1 className="text-2xl md:text-4xl font-bold">
-            <RiTeamFill className="inline-block  mr-2 mb-1" />
+            <RiTeamFill className="inline-block mr-2 mb-1" />
             NOTRE EQUIPE
           </h1>
           <p className="md:text-[16px] text-sm text-left md:text-center px-4 md:px-[20%] pt-8">
@@ -50,21 +57,21 @@ const CareHeart = () => {
             nombreuses des consommatrices/consommateurs soucieux de leur bien
             être.
           </p>
-        </motion.h2>
+        </motion.div>
 
         <div className="w-full grid md:grid-cols-4 sm:grid-cols-2 gap-8 text-[#1d2f4c]">
           {equipe.map(({ job, icon }, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-center gap-4 rounded-[0.5rem] bg-white p-4"
+              className="flex flex-col items-center shadow-md justify-center gap-4 rounded-[0.5rem] bg-white p-4"
             >
-              <p> {icon} </p>
-              <h1> {job} </h1>
+              <p>{icon}</p>
+              <h1>{job}</h1>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

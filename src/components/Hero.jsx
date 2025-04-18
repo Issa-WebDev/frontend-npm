@@ -4,7 +4,7 @@ import { Cross } from "lucide-react";
 import { Link } from "react-router-dom";
 import IntroCard from "./IntroCard";
 
-const images = ["/banner1.webp", "/banner2.webp", "/banner3.webp"];
+const images = ["/b1.webp","/b2.webp", "/b3.webp"];
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);
@@ -64,6 +64,7 @@ export default function Hero() {
               />
             </motion.div>
           </AnimatePresence>
+
           <div className="absolute inset-0 bg-black/50" />
         </div>
 
@@ -77,7 +78,7 @@ export default function Hero() {
           >
             <h1 className="text-1xl lg:text-2xl xl:text-3xl font-bold leading-tight mb-6">
               LA NOUVELLE PHARMACIE MPOUTO
-              <Cross className="text-[#7FB23A] inline" size={25} />
+              <Cross className="text-white inline" size={25} />
             </h1>
             <p className="text-md text-justify text-gray-100 mb-6 md:text-left">
               C’est un engagement pour toute une vie. Il se matérialise par
@@ -90,7 +91,7 @@ export default function Hero() {
               ne suis pas déçu d’appartenir à cette famille.
             </p>
             <Link to="/equipe">
-              <button className="bg-[#7FB23A] rounded-[0.5rem] hover:opacity-90 font-bold text-white px-4 py-2 transition mt-2 cursor-pointer">
+              <button className="bg-[#EAD72A] rounded-[0.5rem] hover:opacity-90 font-bold text-gray-700 px-4 py-2 transition mt-2 cursor-pointer">
                 voir plus
               </button>
             </Link>

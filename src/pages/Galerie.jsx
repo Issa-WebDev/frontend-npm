@@ -2,14 +2,15 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { RiGalleryFill } from "react-icons/ri";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules"; // ✅ ici
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "../swiper-custom.css";
 import Contact from "../components/Contact";
 
-const images = Array.from({ length: 50 }, (_, i) => `/galerie${i + 1}.webp`);
+const images = Array.from({ length: 40 }, (_, i) => `/galerie${i + 1}.webp`);
+console.log(images)
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -20,37 +21,57 @@ export default function Galerie() {
   const [modalIndex, setModalIndex] = useState(null);
 
   return (
-    <section className="py-16">
+    <section className="py-4">
       <div className="max-w-7xl mx-auto px-4 py-12">
-        <motion.h2
+        <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className="text-3xl md:text-4xl font-bold text-center mb-12"
+          className="relative w-full h-[40vh] md:h-[50vh] flex items-center justify-center text-white"
         >
-          <RiGalleryFill className="inline-block text-[#7FB23A] mr-2 mb-1" />
-          NOTRE GALERIE
-        </motion.h2>
+          <div className="absolute z-20 inset-0 bg-black/40" />
+          <img
+            src="/bannerg.webp"
+            alt="Bannière"
+            className="absolute rounded-md w-full h-full object-cover"
+          />
 
-        {/* Carousel visible directement */}
-        <div className="hidden md:block">
+          <motion.h2
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+            className="absolute z-50 text-3xl md:text-4xl font-bold text-center mb-12"
+          >
+            <RiGalleryFill className="inline-block text-[#7FB23A] mr-2 mb-1" />
+            NOTRE GALERIE
+          </motion.h2>
+        </motion.div>
+
+        {/* Carousel toujours visible, responsive */}
+        <motion.div
+          className="mt-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+        >
           <Swiper
-            modules={[Navigation, Pagination, Autoplay]} // ✅ autoplay ici
+            modules={[Navigation, Pagination, Autoplay]}
             navigation
             pagination={{ clickable: true }}
             autoplay={{
               delay: 3000,
               disableOnInteraction: false,
               pauseOnMouseEnter: true,
-            }} // ✅ autoplay config
+            }}
             loop={true}
             spaceBetween={20}
-            slidesPerView={3}
             breakpoints={{
-              768: { slidesPerView: 3 },
-              640: { slidesPerView: 2 },
               0: { slidesPerView: 1 },
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
             }}
           >
             {images.map((src, index) => (
@@ -69,29 +90,11 @@ export default function Galerie() {
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
-
-        {/* Mobile fallback (grid) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:hidden">
-          {images.map((src, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ scale: 1.02 }}
-              onClick={() => setModalIndex(index)}
-              className="rounded-lg shadow-lg overflow-hidden cursor-pointer"
-            >
-              <img
-                src={src}
-                alt={`galerie-${index}`}
-                className="w-full h-64 object-cover"
-              />
-            </motion.div>
-          ))}
-        </div>
+        </motion.div>
 
         {/* Modal Fullscreen Carousel */}
         {modalIndex !== null && (
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-90 flex items-center justify-center">
+          <div className="fixed inset-0 z-101 bg-black bg-opacity-90 flex items-center justify-center">
             <button
               className="absolute top-4 right-4 text-white text-3xl cursor-pointer"
               onClick={() => setModalIndex(null)}

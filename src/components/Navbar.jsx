@@ -27,7 +27,7 @@ export default function Navbar() {
   }, [location.pathname]);
 
   return (
-    <nav className="bg-[#1d2f4c] text-white shadow sticky top-0 z-50">
+    <nav className="bg-[#6A874C] text-white shadow sticky top-0 z-100">
       <div className="relative max-w-7xl mx-auto px-4 py-8 flex justify-between items-center font-sans">
         {/* LOGO */}
         <div></div>
@@ -148,7 +148,7 @@ export default function Navbar() {
           </div>
 
           <Link to="/contact">
-            <button className="bg-[#7FB23A] rounded-[0.2rem] hover:opacity-90 font-bold text-white px-4 py-2 transition cursor-pointer">
+            <button className="bg-[#EAD72A] rounded-[0.2rem] hover:opacity-90 font-bold text-gray-700 px-4 py-2 transition cursor-pointer">
               Contact
             </button>
           </Link>
@@ -173,7 +173,7 @@ export default function Navbar() {
       <AnimatePresence>
         {selectedPharmaLink && (
           <motion.div
-            className="bg-[#EAD72A] text-black z-50 flex justify-center gap-4 sm:gap-6 py-2 px-4 text-[10px] sm:text-sm border-t border-gray-200"
+            className="bg-[#EAD72A] text-black z-50 flex flex-wrap justify-center gap-4 sm:gap-6 py-2 px-4  border-t border-gray-200"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
@@ -207,7 +207,7 @@ export default function Navbar() {
       {/* MOBILE MENU */}
       {isMobileMenuOpen && (
         <div className="lg:hidden px-4 pb-6">
-          <div className="flex flex-col gap-4 text-sm bg-[#1d2f4c] pt-4 border-t border-white/20">
+          <div className="flex flex-col gap-4 text-sm  pt-4 border-t border-white/20">
             <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>
               Accueil
             </Link>
@@ -272,8 +272,9 @@ export default function Navbar() {
                 Cosmétovigilance
               </Link>
             </div>
+
             <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
-              <button className="bg-[#7FB23A] w-full rounded-[0.5rem] hover:opacity-90 font-bold text-white px-4 py-2 transition mt-2 cursor-pointer">
+              <button className="bg-[#EAD72A] w-full rounded-[0.5rem] hover:opacity-90 font-bold text-gray-700 px-4 py-2 transition mt-2 cursor-pointer">
                 Contact
               </button>
             </Link>
