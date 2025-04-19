@@ -25,7 +25,6 @@ const Cosmetovigilance = () => {
             className="absolute rounded-md w-full h-full object-cover"
           />
 
-          
           <motion.h1
             initial="hidden"
             whileInView="visible"
@@ -53,7 +52,7 @@ const Cosmetovigilance = () => {
         variants={fadeInUp}
         className="bg-white rounded-xl shadow-md p-6 md:p-10 mx-auto mb-12"
       >
-        <h2 className="text-3xl font-bold text-pink-600 mb-4">
+        <h2 className="text-3xl font-bold text-green-700 mb-4">
           La Cosmétovigilance
         </h2>
         <p className="text-gray-700 text-lg leading-relaxed">
@@ -88,7 +87,7 @@ const Cosmetovigilance = () => {
         variants={fadeInUp}
         className="bg-white rounded-xl shadow-md p-6 md:p-10 mx-auto"
       >
-        <h2 className="text-2xl font-semibold text-pink-600 mb-4">
+        <h2 className="text-2xl font-semibold text-green-700 mb-4">
           Pourquoi c’est important ?
         </h2>
         <p className="text-gray-700 leading-relaxed text-lg">

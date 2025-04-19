@@ -33,7 +33,7 @@ export default function PartnerMarquee() {
     <section className="bg-[#f4f4f4] py-8 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-center text-2xl md:text-4xl font-semibold mb-6">
-          NOS MARQUES
+          NOS PARTENAIRES ASSURANCE
         </h2>
         <div className="relative w-full overflow-hidden">
           <div className="flex gap-10 animate-marquee hover:[animation-play-state:paused]">

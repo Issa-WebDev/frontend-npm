@@ -91,37 +91,37 @@ const ConseilEtAvis = () => {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="grid md:grid-cols-2 gap-8 items-center"
+        className="grid md:grid-cols-2 gap-10 items-center"
       >
-        <div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">NOS CONSEILS</h2>
-          <p className="mb-4 leading-relaxed text-gray-800">
-            La Nouvelle Pharmacie Mpouto a pour ambition d’être une des
-            références pour répondre aux problèmes de peau que vous rencontrez.
-          </p>
-          <p className="mb-4 leading-relaxed text-gray-800">
-            Les peaux ethniques, mixtes, d’hommes, de femmes, d’enfants ont
-            leurs spécificités. Aussi, la peau d’homme n’est pas exactement
-            celle d’une femme ou d’un bébé…
-          </p>
-          <p className="mb-4 leading-relaxed text-gray-800">
-            Partant, nous vous proposerons des formules conçues, développées,
-            évaluées sous contrôles de spécialistes habilités comme des
-            Dermatologues, Dermo-toxicologues.
-          </p>
-          <p className="leading-relaxed text-gray-800">
-            Un réseau de cosmétovigilance, en étroite collaboration avec notre
-            centre d'application, suivra la vie des produits mis sur le marché.
-            Cette exigence nouvelle s’impose au Dermo-toxicologue, vu le nombre
-            de cas d’inconforts rapportés.
-          </p>
-        </div>
         <div className="w-full">
           <img
             src="/conseil.webp"
             alt="Conseils dermatologiques"
             className="w-full object-cover shadow-lg"
           />
+        </div>
+        <div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">NOS CONSEILS</h2>
+          <p className="mb-4 leading-relaxed text-gray-800 text-justify">
+            La Nouvelle Pharmacie Mpouto a pour ambition d’être une des
+            références pour répondre aux problèmes de peau que vous rencontrez.
+          </p>
+          <p className="mb-4 leading-relaxed text-gray-800 text-justify">
+            Les peaux ethniques, mixtes, d’hommes, de femmes, d’enfants ont
+            leurs spécificités. Aussi, la peau d’homme n’est pas exactement
+            celle d’une femme ou d’un bébé…
+          </p>
+          <p className="mb-4 leading-relaxed text-gray-800 text-justify">
+            Partant, nous vous proposerons des formules conçues, développées,
+            évaluées sous contrôles de spécialistes habilités comme des
+            Dermatologues, Dermo-toxicologues.
+          </p>
+          <p className="leading-relaxed text-gray-800 text-justify">
+            Un réseau de cosmétovigilance, en étroite collaboration avec notre
+            centre d'application, suivra la vie des produits mis sur le marché.
+            Cette exigence nouvelle s’impose au Dermo-toxicologue, vu le nombre
+            de cas d’inconforts rapportés.
+          </p>
         </div>
       </motion.div>
 
@@ -141,7 +141,7 @@ const ConseilEtAvis = () => {
             <h2 className="text-xl md:text-2xl font-semibold text-green-700">
               Vous d'abord
             </h2>
-            <p className="text-gray-700">
+            <p className="text-gray-700 text-justify">
               La Nouvelle Pharmacie M'Pouto « Penser GLOBAL pour mieux agir
               LOCAL ensemble » se met à votre disposition tous les jours de la
               semaine pour vous conseiller, orienter, aiguiller… munis d’une
@@ -177,7 +177,7 @@ const ConseilEtAvis = () => {
             <h2 className="text-xl md:text-2xl font-semibold text-green-700">
               La croyance du Dr TRAORE
             </h2>
-            <p className="text-gray-700">
+            <p className="text-gray-700 text-justify">
               Convaincu que le triptyque « Environnement - Alimentation - Santé
               » est indissociable, Dr TRAORE Adama à force de travail avec
               rigueur et passion s’est construit autour de ces 3 axes pendant 28
@@ -199,7 +199,7 @@ const ConseilEtAvis = () => {
             <h2 className="text-xl md:text-2xl font-semibold text-green-700">
               Son expertise à votre disposition
             </h2>
-            <p className="text-gray-700">
+            <p className="text-gray-700 text-justify">
               La recrudescence rapprochée de pandémies de ces dernières années
               (i.e. Ebola, Covid, Variole du singe…), prouve qu’il avait vu
               juste pour ses choix de spécialisation DEA (Toxicologie de

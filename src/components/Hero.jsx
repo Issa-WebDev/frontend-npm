@@ -80,7 +80,7 @@ export default function Hero() {
               LA NOUVELLE PHARMACIE MPOUTO
               <Cross className="text-white inline" size={25} />
             </h1>
-            <p className="text-md text-justify text-gray-100 mb-6 md:text-left">
+            <p className="text-md md:text-justify text-gray-100 mb-6 text-left">
               C’est un engagement pour toute une vie. Il se matérialise par
               l’appartenance à notre Ordre. Après des années de travail et
               d’apprentissage, le Docteur en Pharmacie a l’obligation de tenir
@@ -91,7 +91,7 @@ export default function Hero() {
               ne suis pas déçu d’appartenir à cette famille.
             </p>
             <Link to="/equipe">
-              <button className="bg-[#EAD72A] rounded-[0.5rem] hover:opacity-90 font-bold text-gray-700 px-4 py-2 transition mt-2 cursor-pointer">
+              <button className="bg-[#EAD72A] rounded-[0.5rem] hover:opacity-90 font-semibold text-gray-700 px-4 py-2 transition mt-2 cursor-pointer">
                 voir plus
               </button>
             </Link>
