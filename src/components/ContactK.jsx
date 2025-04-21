@@ -1,46 +1,44 @@
 import { useRef } from "react";
-// import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 import { toast, Toaster } from "react-hot-toast";
 import { motion } from "framer-motion";
 import { FaPhoneAlt } from "react-icons/fa";
 
-export default function Contact() {
+export default function ContactK() {
   const fadeInUp = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+	hidden: { opacity: 0, y: 30 },
+	visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
   };
   const form = useRef();
 
-  const sendEmail = async (e) => {
-    e.preventDefault();
+  const sendEmail = (e) => {
+	e.preventDefault();
 
-    const formData = {
-      nom: form.current.nom.value,
-      email: form.current.email.value,
-      numero: form.current.numero.value,
-      message: form.current.message.value,
-    };
+	const formData = {
+	  nom: form.current.nom.value,
+	  email: form.current.email.value,
+	  numero: form.current.numero.value,
+	  message: form.current.message.value,
+	};
 
-    const toastId = toast.loading("Envoi en cours...");
+	const toastId = toast.loading("Envoi en cours...");
 
-    try {
-      const res = await fetch("http://localhost:5000/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      if (res.ok) {
-        toast.success("Message envoyé avec succès !", { id: toastId });
-        form.current.reset();
-      } else {
-        throw new Error();
-      }
-    } catch (err) {
-      toast.error("Une erreur est survenue, veuillez réessayer.", {
-        id: toastId,
-      });
-    }
+	emailjs
+	  .send(
+		"service_8cp7vx7",
+		"template_g9gfe0q",
+		formData,
+		"QHtI5zOsEGjMmBwb6"
+	  )
+	  .then(() => {
+		toast.success("Message envoyé avec succès !", { id: toastId });
+		form.current.reset();
+	  })
+	  .catch(() => {
+		toast.error("Une erreur est survenue, veuillez réessayer.", {
+		  id: toastId,
+		});
+	  });
   };
 
   return (
@@ -104,7 +102,7 @@ export default function Contact() {
           </div>
           <textarea
             name="message"
-            placeholder="Votre message"
+            placeholder="Description du produit"
             rows="5"
             required
             className="w-full px-4 py-2 border text-gray-500 border-gray-300 rounded-[0.2rem] focus:outline-none focus:ring-2 focus:ring-[#7FB23A]"

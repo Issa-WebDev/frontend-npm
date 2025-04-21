@@ -14,19 +14,19 @@ const CareHeart = () => {
 
   const equipe = [
     {
-      job: "Pharmacien",
+      job: "Pharmaciens",
       icon: <GiHealthNormal size={40} />,
     },
     {
-      job: "Médecins",
-      icon: <FaUserMd size={40} />,
-    },
-    {
-      job: "Expert Biologiste",
+      job: "Biologistes",
       icon: <GiChemicalDrop size={40} />,
     },
     {
-      job: "Thechniciens",
+      job: "Experts Dermocosmétique",
+      icon: <FaUserMd size={40} />,
+    },
+    {
+      job: "Gestionnaires",
       icon: <MdEngineering size={40} />,
     },
   ];
@@ -52,10 +52,8 @@ const CareHeart = () => {
             NOTRE EQUIPE
           </h1>
           <p className="md:text-[16px] text-sm text-left md:text-center px-4 md:px-[20%] pt-8">
-            Composée de Pharmacien, Médecins, Experts Biologistes, Techniciens
-            investis dans la Parapharmacie pour répondre aux sollicitations
-            nombreuses des consommatrices/consommateurs soucieux de leur bien
-            être.
+            Composée de Pharmaciens, de Biologistes, d'Experts Dermocosmétique,
+            de Gestionnaires, d'Auxiliaires en pharmacie
           </p>
         </motion.div>
 

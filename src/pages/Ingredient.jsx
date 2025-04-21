@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion"
+import ContactK from "../components/ContactK";
 
 const Ingredient = () => {
   return (
@@ -119,6 +121,15 @@ const Ingredient = () => {
             </div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+          viewport={{ once: true }}
+        >
+          <ContactK />
+        </motion.div>
       </div>
     </section>
   );

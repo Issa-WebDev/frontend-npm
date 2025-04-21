@@ -40,7 +40,7 @@ export default function IntroCard() {
       role: "",
       image: "/conseil.jpg",
       description:
-        "Sous la responsabilité de Dr TRAORE, le VISA KLC ambitionne d'encadrer la formation des parapharmaciens en passant par la recommandation de programmes de soins et/ou des routines adéquates.",
+        "La Nouvelle Pharmacie Mpouto a pour ambition d’être une des références pour répondre aux problèmes de peau que vous rencontrez.",
       color: "linear-gradient(60deg, #7E9B5E, #6A874C)",
     },
     {

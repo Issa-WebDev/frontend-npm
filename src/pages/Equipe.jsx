@@ -18,26 +18,22 @@ const ceo = {
 
 const equipe = [
   {
-    nom: "Mr Patrick Jean",
-    role: "Medecins",
+    nom: "Biologistes",
     image: "medecin.webp",
     bio: "Fatou accompagne les patients avec bienveillance et prépare les ordonnances avec rigueur.",
   },
   {
-    nom: "Dr Traoré Adama",
-    role: "Pharmacien",
+    nom: "Pharmaciens",
     image: "pharmacien.webp",
     bio: "Ahmed s’occupe de la logistique et veille à ce que les stocks soient toujours disponibles.",
   },
   {
-    nom: "Mme Josiane Aka",
-    role: "Experts Biologistes",
+    nom: "Experts Dermocosmétique",
     image: "eb.webp",
     bio: "Souriante et à l’écoute, elle oriente les clients dès leur arrivée avec professionnalisme.",
   },
   {
-    nom: "Mr Ahmed Traoré",
-    role: "Techniciens ",
+    nom: "Gestionnaires",
     image: "technicien.webp",
     bio: "Ahmed s’occupe de la logistique et veille à ce que les stocks soient toujours disponibles.",
   },
@@ -161,8 +157,7 @@ export default function Equipe() {
               className="w-full h-80 object-cover"
             />
             <div className="p-4">
-              <h4 className="text-2xl font-semibold">{membre.nom}</h4>
-              <p className="text-[#00B583] font-medium">{membre.role}</p>
+              <h4 className="text-xl font-semibold">{membre.nom}</h4>
               <p className="text-gray-600 mt-2 text-sm">{membre.bio}</p>
             </div>
           </motion.div>

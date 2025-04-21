@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Contact from "../components/Contact";
+import ContactK from "../components/ContactK";
 
 const Credo = () => {
   return (
@@ -68,7 +68,7 @@ const Credo = () => {
           transition={{ duration: 0.3 }}
           viewport={{ once: true }}
         >
-          <Contact />
+          <ContactK />
         </motion.div>
       </div>
     </section>

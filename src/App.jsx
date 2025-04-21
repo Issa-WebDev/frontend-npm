@@ -17,6 +17,7 @@ import Routine from "./pages/Routine";
 import Produit from "./pages/Produit";
 import Cosmetovigilance from "./pages/Cosmetovigilance";
 import Conseil from "./pages/Conseil";
+import Medicament from "./pages/Medicament";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path="/produits" element={<Produit />} />
         <Route path="/cosmetovigilance" element={<Cosmetovigilance />} />
         <Route path="/conseils" element={<Conseil />} />
+        <Route path="/medicaments" element={<Medicament />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <MapFrame />

@@ -65,7 +65,7 @@ export default function Hero() {
             </motion.div>
           </AnimatePresence>
 
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/30" />
         </div>
 
         {/* Contenu texte */}
@@ -76,10 +76,6 @@ export default function Hero() {
             transition={{ duration: 0.5 }}
             className="text-white"
           >
-            <h1 className="text-1xl lg:text-2xl xl:text-3xl font-bold leading-tight mb-6">
-              LA NOUVELLE PHARMACIE MPOUTO
-              <Cross className="text-white inline" size={25} />
-            </h1>
             <p className="text-md md:text-justify text-gray-100 mb-6 text-left">
               C’est un engagement pour toute une vie. Il se matérialise par
               l’appartenance à notre Ordre. Après des années de travail et

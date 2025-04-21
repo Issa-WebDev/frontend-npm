@@ -51,7 +51,7 @@ const CareHeart = () => {
         {/* Texte animé */}
         <motion.div variants={childVariant}>
           <h2 className="text-2xl md:text-4xl font-bold mb-4">
-            PRENEZ SOIN DE VOTRE COEUR
+            L'IMPORTANCE DU BIEN ÊTRE
           </h2>
           <p className="text-sm text-justify leading-7">
             Depuis près de 25 ans, des milliers de médecins dans tout l’état de

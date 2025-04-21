@@ -58,7 +58,7 @@ export default function Horaires() {
             </h3>
             <ul className="space-y-2 text-sm text-gray-700 font-medium">
               <li>Lundi - Vendredi : 07h30 - 20h00</li>
-              <li>Samedi : 07h30 - 15h00</li>
+              <li>Samedi : 07h30 - 13h </li>
               <li>Dimanche : Vente en ligne uniquement 10h30 - 15h00</li>
             </ul>
 

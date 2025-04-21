@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Contact from "../components/Contact";
+import ContactK from "../components/ContactK";
 
 const Routine = () => {
   const routines = [
@@ -45,14 +45,14 @@ const Routine = () => {
             </div>
           ))}
         </div>
-        
+
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
           viewport={{ once: true }}
         >
-          <Contact />
+          <ContactK />
         </motion.div>
       </div>
     </section>

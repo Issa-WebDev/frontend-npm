@@ -28,7 +28,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-[#6A874C] text-white shadow sticky top-0 z-100">
-      <div className="relative max-w-7xl mx-auto px-4 py-8 flex justify-between items-center font-sans">
+      <div className="relative max-w-7xl mx-auto px-4 py-8 flex justify-between items-center">
         {/* LOGO */}
         <div></div>
 
@@ -173,33 +173,44 @@ export default function Navbar() {
       <AnimatePresence>
         {selectedPharmaLink && (
           <motion.div
-            className="bg-[#EAD72A] text-black z-50 flex flex-wrap justify-center gap-4 sm:gap-6 py-2 px-4  border-t border-gray-200"
+            className="bg-[#EAD72A] text-black z-50  border-t border-gray-200"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.1, ease: "easeInOut" }}
           >
-            <Link to="/credo" className="hover:underline whitespace-nowrap">
-              Notre credo KLC
-            </Link>
-            <Link
-              to="/ingredients"
-              className="hover:underline whitespace-nowrap"
-            >
-              Ingrédients
-            </Link>
-            <Link to="/routines" className="hover:underline whitespace-nowrap">
-              Routines
-            </Link>
-            <Link to="/produits" className="hover:underline whitespace-nowrap">
-              Produits
-            </Link>
-            <Link
-              to="/cosmetovigilance"
-              className="hover:underline whitespace-nowrap"
-            >
-              Cosmétovigilance
-            </Link>
+            <div className="max-w-7xl mx-auto px-4 flex justify-between py-2">
+              <div className="flex gap-x-4 gap-y-3 flex-wrap text-sm">
+                <Link to="/credo" className="hover:underline whitespace-nowrap">
+                  Notre credo KLC
+                </Link>
+                <Link
+                  to="/ingredients"
+                  className="hover:underline whitespace-nowrap"
+                >
+                  Ingrédients
+                </Link>
+                <Link
+                  to="/routines"
+                  className="hover:underline whitespace-nowrap"
+                >
+                  Routines
+                </Link>
+                <Link
+                  to="/produits"
+                  className="hover:underline whitespace-nowrap"
+                >
+                  Produits
+                </Link>
+                <Link
+                  to="/cosmetovigilance"
+                  className="hover:underline whitespace-nowrap"
+                >
+                  Cosmétovigilance
+                </Link>
+              </div>
+              <div></div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

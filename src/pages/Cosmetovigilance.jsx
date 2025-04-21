@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Contact from "../components/Contact";
+import ContactK from "../components/ContactK";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -104,7 +104,7 @@ const Cosmetovigilance = () => {
         transition={{ duration: 0.3 }}
         viewport={{ once: true }}
       >
-        <Contact />
+        <ContactK />
       </motion.div>
     </div>
   );
