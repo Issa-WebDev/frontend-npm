@@ -1,44 +1,50 @@
 import { useRef } from "react";
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
 import { toast, Toaster } from "react-hot-toast";
 import { motion } from "framer-motion";
 import { FaPhoneAlt } from "react-icons/fa";
 
-export default function ContactK() {
+export default function Contact() {
   const fadeInUp = {
-	hidden: { opacity: 0, y: 30 },
-	visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
   };
   const form = useRef();
 
-  const sendEmail = (e) => {
-	e.preventDefault();
+  const sendEmail = async (e) => {
+    e.preventDefault();
 
-	const formData = {
-	  nom: form.current.nom.value,
-	  email: form.current.email.value,
-	  numero: form.current.numero.value,
-	  message: form.current.message.value,
-	};
+    const formData = {
+      nom: form.current.nom.value,
+      email: form.current.email.value,
+      numero: form.current.numero.value,
+      message: form.current.message.value,
+      cible: "parapharmacie",
+    };
 
-	const toastId = toast.loading("Envoi en cours...");
+    const toastId = toast.loading("Envoi en cours...");
 
-	emailjs
-	  .send(
-		"service_8cp7vx7",
-		"template_g9gfe0q",
-		formData,
-		"QHtI5zOsEGjMmBwb6"
-	  )
-	  .then(() => {
-		toast.success("Message envoyé avec succès !", { id: toastId });
-		form.current.reset();
-	  })
-	  .catch(() => {
-		toast.error("Une erreur est survenue, veuillez réessayer.", {
-		  id: toastId,
-		});
-	  });
+    try {
+      const res = await fetch(
+        "https://backend-npm-x183.onrender.com/api/contact",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      if (res.ok) {
+        toast.success("Message envoyé avec succès !", { id: toastId });
+        form.current.reset();
+      } else {
+        throw new Error();
+      }
+    } catch (err) {
+      toast.error("Une erreur est survenue, veuillez réessayer.", {
+        id: toastId,
+      });
+    }
   };
 
   return (
@@ -119,4 +125,4 @@ export default function ContactK() {
   );
 }
 
-// service_ls6pv7b;
+

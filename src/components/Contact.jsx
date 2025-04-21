@@ -19,16 +19,20 @@ export default function Contact() {
       email: form.current.email.value,
       numero: form.current.numero.value,
       message: form.current.message.value,
+      cible: "pharmacie",
     };
 
     const toastId = toast.loading("Envoi en cours...");
 
     try {
-      const res = await fetch("http://localhost:5000/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const res = await fetch(
+        "https://backend-npm-x183.onrender.com/api/contact",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (res.ok) {
         toast.success("Message envoyé avec succès !", { id: toastId });
