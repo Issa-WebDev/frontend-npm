@@ -32,9 +32,17 @@ const equipe = [
     image: "eb.webp",
     bio: "Souriante et à l’écoute, elle oriente les clients dès leur arrivée avec professionnalisme.",
   },
+];
+
+const equipes = [
   {
     nom: "Gestionnaires",
     image: "technicien.webp",
+    bio: "Ahmed s’occupe de la logistique et veille à ce que les stocks soient toujours disponibles.",
+  },
+  {
+    nom: "Auxiliaires en pharmacie",
+    image: "banner2.webp",
     bio: "Ahmed s’occupe de la logistique et veille à ce que les stocks soient toujours disponibles.",
   },
 ];
@@ -85,7 +93,6 @@ export default function Equipe() {
         viewport={{ once: true }}
         className="grid grid-cols-1 md:grid-cols-[40%_57%] gap-8 mt-20 items-center mb-20"
       >
-    
         <div className="text-center md:text-left">
           <h2 className="text-3xl md:text-4xl font-bold mb-2">{ceo.nom}</h2>
           <p className="text-[#00B583] font-semibold text-lg mb-4">
@@ -97,13 +104,12 @@ export default function Equipe() {
           <p className="text-gray-900 italic pt-5 text-xl">{ceo.foot}</p>
         </div>
 
-        
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.1 }}
           viewport={{ once: true }}
-          className="w-full md:h-[600px] overflow-hidden shadow-xl"
+          className="w-full overflow-hidden"
         >
           <img
             src={ceo.image}
@@ -113,7 +119,6 @@ export default function Equipe() {
         </motion.div>
       </motion.div>
 
-      
       <motion.h2
         initial="hidden"
         whileInView="visible"
@@ -140,8 +145,33 @@ export default function Equipe() {
       </motion.p>
 
       {/* Équipe */}
-      <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-10">
+      <div className="grid gap-8 grid-cols-1 md:grid-cols-3 mt-10">
         {equipe.map((membre, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.2, duration: 0.4 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.02 }}
+            className="bg-white shadow-lg rounded-sm overflow-hidden"
+          >
+            <img
+              src={membre.image}
+              alt={membre.nom}
+              className="w-full h-80 object-cover"
+            />
+            <div className="p-4">
+              <h4 className="text-xl font-semibold">{membre.nom}</h4>
+              <p className="text-gray-600 mt-2 text-sm">{membre.bio}</p>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* equipes */}
+      <div className="grid gap-8 grid-cols-1 md:grid-cols-2 mt-10">
+        {equipes.map((membre, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 40 }}

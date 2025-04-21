@@ -56,7 +56,7 @@ const ConseilEtAvis = () => {
         <div className="relative mb-14 w-full h-[40vh] md:h-[50vh] flex items-center justify-center text-white">
           <div className="absolute z-20 inset-0 bg-black/40" />
           <img
-            src="/b2.webp"
+            src="/conseilb.webp"
             alt="Bannière"
             className="absolute rounded-md w-full h-full object-cover"
           />

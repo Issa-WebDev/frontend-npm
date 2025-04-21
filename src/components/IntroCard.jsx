@@ -30,7 +30,7 @@ export default function IntroCard() {
     {
       name: "Dr TRAORE Adama",
       role: "CEO | Pharmacien titulaire",
-      image: "/ceo-profil.webp",
+      image: "/pharmacien.webp",
       description:
         "Dr TRAORE Adama, PharmD - PhD Dermo-cosmétologie est un ancien Interne des Hôpitaux. Le choix de l’industrie l’a amené à travailler durant 23 ans à Paris pour les leaders de la cosmétique tels que Chanel, l'Oréal, LVMH, Seppic, J&J, Galderma.",
       color: "linear-gradient(90deg, #7E9B5E, #6A874C)",
