@@ -13,15 +13,13 @@ html {
 h1 {
   font-family: "Inter", sans-serif;
 }
-/* p {
-  font-family: "Poppins", sans-serif;
-} */
 
-/* Ajoute cette classe utilitaire dans ton CSS global si tu veux */
+
 .input {
   @apply w-full p-3 border border-gray-300 dark:border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-teal-500 bg-white dark:bg-gray-800 text-gray-800 dark:text-white;
 }
 
+/* animation pour les partenaires */
 @keyframes marquee {
   0% {
     transform: translateX(0%);

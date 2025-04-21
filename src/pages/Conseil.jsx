@@ -125,7 +125,6 @@ const ConseilEtAvis = () => {
         </div>
       </motion.div>
 
-      {/* card avec texte  */}
 
       {/* CONTENU PRINCIPAL */}
       <motion.div

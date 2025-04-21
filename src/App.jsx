@@ -35,10 +35,8 @@ function App() {
         <Route path="/cosmetovigilance" element={<Cosmetovigilance />} />
         <Route path="/conseils" element={<Conseil />} />
         <Route path="*" element={<NotFound />} />
-        {/* autres routes plus tard */}
       </Routes>
       <MapFrame />
-      {/* scroll to top */}
       <ScrollToTopButton />
       <Horaires />
       <PartnerMarquee />

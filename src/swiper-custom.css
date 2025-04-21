@@ -1,4 +1,4 @@
-/* Flèches vertes et plus grandes */
+/* Flèches */
 .swiper-button-prev,
 .swiper-button-next {
   color: rgba(225, 225, 225, 0.9);
@@ -7,7 +7,7 @@
   cursor: pointer;
 }
 
-/* Points de pagination plus gros et verts */
+/* Points de pagination */
 .swiper-pagination-bullet {
   background: #fff;
   width: 12px;

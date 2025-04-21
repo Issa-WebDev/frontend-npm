@@ -89,7 +89,7 @@ export default function Equipe() {
         viewport={{ once: true }}
         className="grid grid-cols-1 md:grid-cols-[40%_57%] gap-8 mt-20 items-center mb-20"
       >
-        {/* Texte */}
+    
         <div className="text-center md:text-left">
           <h2 className="text-3xl md:text-4xl font-bold mb-2">{ceo.nom}</h2>
           <p className="text-[#00B583] font-semibold text-lg mb-4">
@@ -101,7 +101,7 @@ export default function Equipe() {
           <p className="text-gray-900 italic pt-5 text-xl">{ceo.foot}</p>
         </div>
 
-        {/* Image */}
+        
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -117,7 +117,7 @@ export default function Equipe() {
         </motion.div>
       </motion.div>
 
-      {/* Titre équipe */}
+      
       <motion.h2
         initial="hidden"
         whileInView="visible"
