@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Cross } from "lucide-react";
 import { Link } from "react-router-dom";
 import IntroCard from "./IntroCard";
 

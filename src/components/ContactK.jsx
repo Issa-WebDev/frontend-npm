@@ -54,8 +54,8 @@ export default function Contact() {
       transition={{ duration: 0.3 }}
       viewport={{ once: true }}
     >
-      <section className="min-h-screen max-w-7xl mx-auto px-4 pb-20">
-        <div className="relative mt-20 w-full h-[40vh] md:h-[50vh] flex items-center justify-center text-white">
+      <section className="min-h-screen max-w-7xl mx-auto pb-20">
+        <div className="relative px-4 mt-20 w-full h-[40vh] md:h-[50vh] flex items-center justify-center text-white">
           <div className="absolute z-20 inset-0 bg-black/40" />
           <img
             src="/c1.webp"
