@@ -139,9 +139,10 @@ export default function Equipe() {
         transition={{ delay: 0.35, duration: 0.1 }}
         className="md:text-[16px] text-sm text-left md:text-center px-4 md:px-[20%] pt-8"
       >
-        Composée de Pharmacien, Médecins, Experts, Biologistes, Techniciens
-        investis dans la Parapharmacie pour répondre aux sollicitations
-        nombreuses des consommatrices/consommateurs soucieux de leur bien être.
+        NOTRE EQUIPE Composée de Pharmaciens, de Biologistes, d'Experts
+        Dermocosmétique, de Gestionnaires, d'Auxiliaires en pharmacie investis
+        dans la Parapharmacie pour répondre aux sollicitations nombreuses des
+        consommatrices/consommateurs soucieux de leur bien être.
       </motion.p>
 
       {/* Équipe */}

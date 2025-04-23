@@ -85,12 +85,14 @@ const Serment = () => {
             {
               icon: <MdSupportAgent size={70} className="text-[#EAD72A]" />,
               title: "CONSEILS",
-              text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta commodi fugit magni necessitatibus, minus impedit iusto quisquam dolorum est harum?",
+              text: " Les trois (3) étapes clés de notre approche : ",
+              list: "1- Diagnostic ==> 2- Proposition de produits ==> 3- Routine",
             },
             {
               icon: <GiMedicinePills size={70} className="text-[#EAD72A]" />,
               title: "PARA-PHARMACIE",
-              text: "Sous la responsabilité de Dr TRAORE, le VISA KLC ambitionne d'encadrer la formation des parapharmaciens en passant par la recommandation de programmes de soins et/ou des routines adéquates.",
+              text: "Les trois (3) étapes clés de notre approche : ",
+              list: "1- Expertise ==> 2- Visa KLC ==> 3- Cosmétovigilance"
             },
             {
               icon: <HiOutlineNewspaper size={70} className="text-[#EAD72A]" />,
@@ -108,7 +110,8 @@ const Serment = () => {
               </div>
               <div className="flex flex-col gap-4">
                 <h1 className="text-md md:text-xl">{item.title}</h1>
-                <p className="text-sm">{item.text}</p>
+                <p className="text-md">{item.text}</p>
+                <p className="text-sm">{item.list}</p>
               </div>
             </motion.div>
           ))}

@@ -9,10 +9,6 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-4 gap-16 text-sm text-left">
         {/* Branding */}
         <div>
-          <Link to="/" className="font-bold text-white">
-            <Cross className="text-white inline" size={18} /> NOUVELLE PHARMACIE
-            MPOUTO
-          </Link>
           <p className="mt-2 text-gray-100">
             Votre santé, notre priorité. Nous vous accompagnons avec
             professionnalisme et bienveillance.
