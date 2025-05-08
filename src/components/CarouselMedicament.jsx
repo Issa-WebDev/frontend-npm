@@ -11,22 +11,22 @@ const products = [
   {
     id: 1,
     name: "Produit 1",
-    image: "/produit1.webp",
+    image: "/kly.jpg",
   },
   {
     id: 2,
     name: "Produit 2",
-    image: "/produit4.webp",
+    image: "/klyciacream.jpg",
   },
   {
     id: 3,
     name: "Produit 3",
-    image: "/produit2.webp",
+    image: "/produit3.webp",
   },
   {
     id: 4,
     name: "Produit 4",
-    image: "/produit3.webp",
+    image: "/produit3.jpg",
   },
   {
     id: 5,

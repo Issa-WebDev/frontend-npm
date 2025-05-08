@@ -4,73 +4,86 @@ import ContactK from "../components/ContactK";
 
 const Credo = () => {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-16 text-gray-700">
-      <div className="space-y-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#EAD72A] uppercase">
+    <section className="max-w-7xl mx-auto px-4 py-20 text-gray-700 space-y-16">
+      <div className="text-center space-y-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-700 uppercase">
           Notre Credo KLC
         </h2>
-        <p className="text-lg leading-relaxed text-justify">
-          Sous la responsabilité de <strong>Dr TRAORE</strong>, KLC ambitionne
-          d’innover dans le domaine de la parapharmacie, au travers du{" "}
-          <strong>VISA KLC</strong>. De l’encadrement et la formation des
-          parapharmaciens en passant par la recommandation de programmes de
-          soins et/ou des routines, KLC offrira ses services et son expertise
-          pour votre bien-être.
+        <p className="text-lg max-w-3xl mx-auto">
+          Une vision fondée sur l’expertise scientifique, l’engagement éthique
+          et l’innovation au service de votre bien-être.
         </p>
-        <p className="text-lg leading-relaxed text-justify">
-          En prêtant le <em>Serment de Galien (1995)</em>, Dr TRAORE s’est «
-          engagé d’exercer, dans l’intérêt de la santé publique, sa profession
-          avec conscience et de respecter non seulement la législation en
-          vigueur, mais aussi les règles de l’honneur ».
-        </p>
-        <p className="text-lg leading-relaxed text-justify">
-          Perfectionniste, Dr TRAORE a d’abord pris le temps de se former sur
-          les exigences et la conformité des biens de consommation et des
-          cosmétiques de qualité (e.g. Maitrise de Sciences Biologiques, DU
-          Dermo-cosmétique, PhD Toxicologie). Spécialisé en Toxicologie de
-          l’environnement (DEA 1997), Dr TRAORE est un écologiste par
-          conviction, animé par le devoir de transmission.
-        </p>
-        <p className="text-lg leading-relaxed text-justify">
-          Tous ces outils ont permis à Dr TRAORE de travailler pendant{" "}
-          <strong>23 ans</strong> dans des multinationales de renommée en
-          Dermo-cosmétiques (<em>Chanel - L’Oréal - LVMH – Galderma</em>) et
-          chez des fabricants de matières premières de haute qualité (
-          <em>Symrise, Seppic, Givaudan</em>).
-        </p>
-        <p className="text-lg leading-relaxed text-justify">
-          L’heure est venue, via le <strong>VISA KLC</strong>, de vous offrir
-          des produits et/ou des services de proximité avec les mêmes exigences
-          techniques et la même rigueur scientifique, en trois points :
-        </p>
-        <ul className="list-disc list-inside pl-4 text-lg leading-relaxed text-justify space-y-2">
+      </div>
+
+      {/* Section Dr Traoré */}
+      <div className="grid md:grid-cols-2 gap-10 items-center">
+        <img
+          src="/pharmacien.webp"
+          alt="Dr TRAORE"
+          className="w-full h-auto rounded-2xl shadow-lg object-cover"
+        />
+        <div className="space-y-4 text-lg leading-relaxed">
+          <p>
+            Sous la responsabilité de <strong>Dr TRAORE</strong>, KLC ambitionne
+            d’innover dans le domaine de la parapharmacie avec le{" "}
+            <strong>VISA KLC</strong>.
+          </p>
+          <p>
+            En prêtant le <em>Serment de Galien (1995)</em>, il s’est engagé à
+            exercer sa profession dans l’intérêt de la santé publique avec
+            rigueur et honneur.
+          </p>
+          <p>
+            Fort de <strong>23 ans</strong> d’expérience dans de grands groupes
+            (Chanel, L’Oréal, LVMH, Galderma), Dr TRAORÉ est un expert passionné
+            par la transmission, la qualité et la responsabilité
+            environnementale.
+          </p>
+        </div>
+      </div>
+
+      {/* Valeurs du Visa KLC */}
+      <div className="bg-[#f9f9f9] p-8 rounded-2xl shadow-md space-y-6">
+        <h3 className="text-2xl font-semibold text-center text-[#EAD72A]">
+          Les 3 piliers du VISA KLC
+        </h3>
+        <ul className="list-disc list-inside space-y-3 text-lg leading-relaxed">
           <li>
-            <strong>D’abord</strong>, votre programme de soins et/ou votre
-            routine avec le VISA KLC vous apportera toutes les garanties de
-            qualité, de sécurité, d’innocuité, d’efficacité en fonction de vos
-            attentes.
+            <strong>Qualité & Sécurité :</strong> Chaque programme de soin offre
+            efficacité, innocuité et haute tolérance.
           </li>
           <li>
-            <strong>Ensuite</strong>, l’expertise du VISA KLC prend en compte le
-            respect de l’environnement pour chaque intrant dans les produits
-            pris isolément.
+            <strong>Responsabilité environnementale :</strong> Sélection stricte
+            des intrants respectueux de l’environnement.
           </li>
           <li>
-            <strong>Enfin</strong>, compte tenu de la raréfaction de produits
-            conformes accessibles aux populations modestes vulnérables en
-            Afrique, le VISA KLC prend en compte la dimension sociétale.
+            <strong>Engagement sociétal :</strong> Accessibilité des produits
+            conformes pour les populations vulnérables.
           </li>
         </ul>
-
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          viewport={{ once: true }}
-        >
-          <ContactK />
-        </motion.div>
       </div>
+
+      {/* Image de l'équipe */}
+      <div className="text-center">
+        <h3 className="text-2xl font-semibold text-[#EAD72A] mb-4">
+          Notre Équipe
+        </h3>
+        <img
+          src="/equipe.webp"
+          alt="Équipe KLC"
+          className="mx-auto rounded-2xl shadow-lg object-cover"
+        />
+      </div>
+
+      {/* Contact */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4 }}
+        viewport={{ once: true }}
+      >
+        <ContactK />
+      </motion.div>
     </section>
   );
 };
