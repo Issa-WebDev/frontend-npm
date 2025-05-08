@@ -51,7 +51,7 @@ const ingredients = [
     origin: "Bio sourcé",
     description:
       "Forme stable de vitamine C associée au glucose. Améliore l’éclat de la peau une fois absorbée.",
-    image: "/ascorbyle.jpg",
+    image: "/gluco.jpg",
   },
   {
     name: "Huile de palme",
@@ -65,7 +65,7 @@ const ingredients = [
     origin: "Bio sourcé",
     description:
       "Référence en hydratation et anti-âge. Restaure la souplesse, l’élasticité et réduit les rides.",
-    image: "/Hyaluronate.jpg",
+    image: "/sodium.jpg",
   },
   {
     name: "Aloe vera",

@@ -33,7 +33,7 @@ export default function Navbar() {
         <div></div>
 
         <Link
-          to="/"
+          to={selectedPharmaLink ? "/credo" : "/"}
           className={`absolute left-0  text-sm font-bold text-white  ${
             selectedPharmaLink
               ? "md:w-[100px] md:h-[100px] w-[70px] h-[60px]"

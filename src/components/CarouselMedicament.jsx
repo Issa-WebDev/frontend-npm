@@ -21,7 +21,7 @@ const products = [
   {
     id: 3,
     name: "Produit 3",
-    image: "/produit3.webp",
+    image: "/p3.webp",
   },
   {
     id: 4,
@@ -31,12 +31,12 @@ const products = [
   {
     id: 5,
     name: "Produit 5",
-    image: "/produit4.webp",
+    image: "/produit5.jpg",
   },
   {
     id: 6,
     name: "Produit 6",
-    image: "/produit2.webp",
+    image: "/produit6.jpg",
   },
 ];
 
