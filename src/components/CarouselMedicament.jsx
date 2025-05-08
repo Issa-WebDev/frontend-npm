@@ -21,7 +21,7 @@ const products = [
   {
     id: 3,
     name: "Produit 3",
-    image: "/p3.webp",
+    image: "/p3.jpg",
   },
   {
     id: 4,
