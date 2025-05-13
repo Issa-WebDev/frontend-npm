@@ -62,14 +62,14 @@ const Serment = () => {
         >
           En présence des maitres de la faculté, des conseillers de l'Ordre des
           pharmacions et de mes condisciples, je jure : <br /> <br />
-          -D'honorer ceux qué m'ont instruit dans les préceptes de mon art et de
+          - Honorer ceux qui m'ont instruit dans les préceptes de mon art et de
           leur témoigner ma reconnaissance en restant fidèle à leur enseignement
           : <br /> <br />
-          -D'exercer, dans l'intérêt de la santé publique, ma profession avee
-          conseience et de respecter non seulement la législation en vigueur,
+          - Exercer, dans l'intérêt de la santé publique, ma profession avec
+          conscience et de respecter non seulement la législation en vigueur,
           mais aussi les règles de l'honneur, de la probité et du
           désintéressement : <br /> <br />
-          -De ne jamais oubler ma responsabilité et mes devoirs envers le malade
+          - De ne jamais oublier ma responsabilité et mes devoirs envers le malade
           et sa dignité humaine. <br /> <br />
           Que les hommes m'accordent leur estime si je suis fidèle à mes
           promesses. <br />

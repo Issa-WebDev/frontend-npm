@@ -44,8 +44,8 @@ const Medicament = () => {
                   Présentations de produits
                 </motion.h1>
                 <p className="text-sm md:text-lg max-w-2xl mx-auto">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Dolorem, odio?
+                  {/* Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolorem, odio? */}
                 </p>
               </div>
             </motion.h1>

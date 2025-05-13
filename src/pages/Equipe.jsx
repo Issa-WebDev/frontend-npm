@@ -20,17 +20,17 @@ const equipe = [
   {
     nom: "Biologistes",
     image: "medecin.webp",
-    bio: "Fatou accompagne les patients avec bienveillance et prépare les ordonnances avec rigueur.",
+    bio: "Il/elle accompagne les patients avec bienveillance et prépare les ordonnances avec rigueur.",
   },
   {
     nom: "Pharmaciens",
     image: "pharmacien.webp",
-    bio: "Ahmed s’occupe de la logistique et veille à ce que les stocks soient toujours disponibles.",
+    bio: "il/elle s’occupe de la logistique et veille à ce que les stocks soient toujours disponibles.",
   },
   {
     nom: "Experts Dermocosmétique",
     image: "eb.webp",
-    bio: "Souriante et à l’écoute, elle oriente les clients dès leur arrivée avec professionnalisme.",
+    bio: "A l’écoute, il/elle oriente les clients dès leur arrivée avec professionnalisme.",
   },
 ];
 
@@ -38,12 +38,12 @@ const equipes = [
   {
     nom: "Gestionnaires",
     image: "technicien.webp",
-    bio: "Ahmed s’occupe de la logistique et veille à ce que les stocks soient toujours disponibles.",
+    bio: "Il/elle s’occupe de la logistique et veille à ce que les stocks soient toujours disponibles.",
   },
   {
     nom: "Auxiliaires en pharmacie",
     image: "banner2.webp",
-    bio: "Ahmed s’occupe de la logistique et veille à ce que les stocks soient toujours disponibles.",
+    bio: "Il/elle s’occupe de la logistique et veille à ce que les stocks soient toujours disponibles.",
   },
 ];
 
