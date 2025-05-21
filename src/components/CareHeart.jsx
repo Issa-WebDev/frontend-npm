@@ -42,7 +42,7 @@ const CareHeart = () => {
           className="flex justify-center md:justify-start"
         >
           <img
-            src="/careheart.jpg"
+            src="/bienetre.png"
             alt="Care Heart"
             className="w-full h-auto rounded-lg shadow-lg"
           />
@@ -50,17 +50,17 @@ const CareHeart = () => {
 
         {/* Texte animé */}
         <motion.div variants={childVariant}>
-          <h2 className="text-2xl md:text-4xl font-bold mb-4">
-            L'IMPORTANCE DU BIEN ÊTRE
+          <h2 className="text-2xl md:text-4xl uppercase font-bold mb-4">
+            Le Bien-Être :
           </h2>
-          <p className="text-sm text-justify leading-7">
-            Depuis près de 25 ans, des milliers de médecins dans tout l’état de
-            l’Utah ont dirigé les patients vers notre centre de médicaments
-            composés. Cela est dû à la combinaison de notre service
-            exceptionnel, nos prix abordables et notre qualité irréprochable. À
-            Medicine Center, la qualité est primordiale. Nous utilisons une
-            technologie de pointe, des équipements modernes et des bases
-            novatrices.
+          <p className="text-sm md:text-[16px] text-justify leading-7">
+            Une Priorité Essentielle Le bien-être, c'est bien
+            plus que l'absence de maladie: c'est un équilibre entre santé
+            physique, mentale et émotionnelle. Pour l'améliorer, adoptez une
+            alimentation saine, restez actif, dormez suffisamment et pratiquez
+            la pleine conscience. Cultivez des relations positives, fixez des
+            objectifs réalistes et accordez-vous des moments de détente. Chaque
+            petit geste compte pour vivre une vie épanouissante et équilibrée. 
           </p>
         </motion.div>
       </div>
